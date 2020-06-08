@@ -74,11 +74,58 @@
 // console.log(fibonacci(7));
 
 //Drill 7 ---------------------------------------------------------
-const factorial = (n) => {
-  if (n === 1) {
-    return 1;
+// const factorial = (n) => {
+//   if (n === 1) {
+//     return 1;
+//   }
+//   return n * factorial(n - 1);
+// };
+
+// console.log(factorial(5));
+
+//Drill 8 ---------------------------------------------------------
+// let mySmallMaze = [
+//   [" ", " ", " "],
+//   [" ", "*", " "],
+//   [" ", " ", "e"],
+// ];
+// let maze = [
+//   [" ", " ", " ", "*", " ", " ", " "],
+//   ["*", "*", " ", "*", " ", "*", " "],
+//   [" ", " ", " ", " ", " ", " ", " "],
+//   [" ", "*", "*", "*", "*", "*", " "],
+//   [" ", " ", " ", " ", " ", " ", "e"],
+// ];
+// function mazeNav() {}
+// mazeNav(mySmallMaze);
+
+//find the index where the previous curious entered
+
+//Drill 9 ---------------------------------------------------------
+
+//Drill 10 ---------------------------------------------------------
+let findPermutations = (string) => {
+  if (!string || typeof string !== "string") {
+    return "Please enter a string";
+  } else if (string.length < 2) {
+    return string;
   }
-  return n * factorial(n - 1);
+
+  let permutationsArray = [];
+
+  for (let i = 0; i < string.length; i++) {
+    let char = string[i];
+
+    if (string.indexOf(char) != i) continue;
+
+    let remainingChars =
+      string.slice(0, i) + string.slice(i + 1, string.length);
+
+    for (let permutation of findPermutations(remainingChars)) {
+      permutationsArray.push(char + permutation);
+    }
+  }
+  return permutationsArray;
 };
 
-console.log(factorial(5));
+console.log(findPermutations("east"));
