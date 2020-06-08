@@ -46,3 +46,16 @@
 // console.log(nthTriangularNumber(6));
 
 //Drill 5 --------------------------------------------------------
+
+// const splitter = (str, char) => {
+//   const idx = str.indexOf(char);
+//   if (idx === -1) {
+//     return [str];
+//   } else {
+//     return [str.slice(0, idx)].concat(splitter(str.slice(idx + char.length), char));
+//   }
+// };
+
+// console.log(splitter('02/20/2020', '/'));
+
+//Drill 6 ---------------------------------------------------------
