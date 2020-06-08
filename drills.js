@@ -26,13 +26,23 @@
 
 //Drill 3 -------------------------------------------------------
 
-let reverseStr = (string) => {
-  if (string === '') {
-    return '';
-  }
-  return (string[string.length - 1]) + reverseStr(string.slice(0, -1));
-};
+// let reverseStr = (string) => {
+//   if (string === '') {
+//     return '';
+//   }
+//   return (string[string.length - 1]) + reverseStr(string.slice(0, -1));
+// };
 
-console.log(reverseStr('fooey'));
+// console.log(reverseStr('fooey'));
 
 //Drill 4 --------------------------------------------------------
+// function nthTriangularNumber(n) {
+//   if (n === 0) {
+//     return n;
+//   }
+//   return n + nthTriangularNumber(n - 1);
+// }
+
+// console.log(nthTriangularNumber(6));
+
+//Drill 5 --------------------------------------------------------
